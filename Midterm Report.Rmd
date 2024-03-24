@@ -1,0 +1,99 @@
+---
+title: "Pacers Shot Chart Report"
+author: "Sean Hooyman"
+date: "2024-03-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Findings and Summary
+
+```{r}
+library(png)
+
+# Set the file path
+file_path_2007 <- "C:/Users/19206/OneDrive/Documents/STAT 345/HW/Pacers_2007_Shot_Chart.png"
+
+# Read the PNG file
+img_2007 <- readPNG(file_path_2007)
+
+# Display the image
+par(mar = rep(0, 4))  # Set margins to 0 to remove surrounding graph
+plot(1, type = 'n', xlab = '', ylab = '', xlim = c(0, 1), ylim = c(0, 1), axes = FALSE)
+rasterImage(img_2007, 0.1, 0.1, 0.9, 0.9)  # Adjust position and size of the image for zoom
+
+
+
+```
+```{r}
+
+file_path_2014 <- "C:/Users/19206/OneDrive/Documents/STAT 345/HW/Pacers_2014_Shot_Chart.png"
+
+# Read the PNG file
+img_2014 <- readPNG(file_path_2014)
+
+# Display the image
+par(mar = rep(0, 4))  # Set margins to 0 to remove surrounding graph
+plot(1, type = 'n', xlab = '', ylab = '', xlim = c(0, 1), ylim = c(0, 1), axes = FALSE)
+rasterImage(img_2014, 0.1, 0.1, 0.9, 0.9)  # Adjust position and size of the image for zoom
+
+```
+
+
+
+```{r}
+
+file_path_2021 <- "C:/Users/19206/OneDrive/Documents/STAT 345/HW/Pacers_2021_Shot_Chart.png"
+
+# Read the PNG file
+img_2021 <- readPNG(file_path_2021)
+
+# Display the image
+par(mar = rep(0, 4))  # Set margins to 0 to remove surrounding graph
+plot(1, type = 'n', xlab = '', ylab = '', xlim = c(0, 1), ylim = c(0, 1), axes = FALSE)
+rasterImage(img_2021, 0.1, 0.1, 0.9, 0.9)  # Adjust position and size of the image for zoom
+
+```
+
+```{r}
+
+file_path_combined <- "C:/Users/19206/OneDrive/Documents/STAT 345/HW/Pacers_2016_to_2021_Shot_Chart.png"
+
+# Read the PNG file
+img_combined <- readPNG(file_path_combined)
+
+# Display the image
+par(mar = rep(0, 4))  # Set margins to 0 to remove surrounding graph
+plot(1, type = 'n', xlab = '', ylab = '', xlim = c(0, 1), ylim = c(0, 1), axes = FALSE)
+rasterImage(img_combined, 0.1, 0.1, 0.9, 0.9)  # Adjust position and size of the image for zoom
+
+```
+
+
+- The NBA has changed from 2007 to 2021, and even from 2014 to 2021
+- There is an increased emphasis on three-point shooting as the NBA evolves and players spend more of their time practicing the three-point shot
+- Not only does the volume increase, but the three-point field goal percentage also increases during this time, hence the increased amount of green behind the arc
+- Longer two-point shots become less frequent as the game evolves
+- Overall, all-around field goal percentage increases during this timeframe
+
+
+## Trends Explained
+
+- The evolution of shot selection can be tied to a number of factors
+- The rise of high percentage three point shooters like Steph Curry and Damian Lillard have certainly been a catalyst for the change in shot selection
+- Analytics have become a significant factor in the new NBA, so evaluating the expected value of any given shot based on its distance, and whether it is a two or three pointer has influenced player shot selection
+- For example, the long two point shot is becoming archaic - teams have figured that it is more beneficial to drive it to the hoop or take a couple steps back and shoot a three-pointer
+- Even in the 2016-2021 shot chart, you can still notice the areas right in front of the three point line having little usage, and that's five years worth of data!
+
+
+## 4 Point Shot?
+
+The four point shot would change the NBA in ways unseen since the addition of the three point arc. During the three point evolution that we are currently witnessing, how quickly could players adapt? How far should the line be drawn?
+
+To start, the four point arc would have to be a simple arc, but deep enough so that players don't turn the game into a long range shooting contest. The ideal length has to be somewhere where the expected value is lower than that of a three-point shot, but arguably lower than a long two that I mentioned earlier.The expected value of the average two-pointer is just under 1, while the expected value of the average three-point shot is over 1. Having an expected value similar to the two and three-pointer is not the solution, as this would turn games into even more of a shootout. The NBA should target an expected value of 0.7 from the four-point arc. The expected value of a 30 foot shot is roughly 0.69, I feel that an arc which is 30 feet away from the hoop is close enough to the 0.7 that will deter most average shooters from even thinking about taking a four-point shot.
+
+One negative consequence of a four-point line would be any team that has to play a truly gifted shooter like Steph Curry, as he can likely have a comparable four-point field goal percentage that lines up with the NBA's average three-point field goal percentage, creating a potential unfair advantage for already great players. A positive consequence of the four-point line would be end of game strategy. Down four? Take a four-pointer to force overtime, no need to foul the other team and play the free throw game, especially in a league where players rarely miss free throws. 
